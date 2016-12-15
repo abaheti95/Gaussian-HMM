@@ -30,6 +30,9 @@ public:
 	void update_mu(vector<double> &mu_inp);
 	void update_sigma(vector<double> &sigma_inp);
 	void update_parameters(vector<double> &mu_inp, vector<double> &sigma_inp);
+	
+	// Get the maximum likelihood estimate of gaussian parameters for the given data points
+	void tune_parameters(vector<vector<double> &X);
 	double evaluate(double<vector> &x);	// Output of the gaussian for the input vector x
 };
 

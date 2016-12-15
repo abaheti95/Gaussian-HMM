@@ -1,6 +1,8 @@
 #ifndef HMM_HPP
 #define HMM_HPP
 
+#include "Gaussian.hpp"
+
 class HMM
 {
 public:
@@ -10,6 +12,7 @@ public:
 	vector<double> inits;				// Initial state probabilities
 	vector<double> trans;				// Transition probabilities
 	vector<double> emits;				// Emission probabilities
+	vector<Gaussian> obs_funcs;			// Vector of observation functions (for each state)
 	// Viterbi Training Variables
 	// Baum Welch Training Variables
 	vector<double> alpha;				// Forward probabilities (matrix T*N stored in a vector)
